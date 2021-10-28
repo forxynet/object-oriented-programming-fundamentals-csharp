@@ -2,47 +2,47 @@
     public class OrderItem {
         public OrderItem() {
 
-    }
+        }
         public OrderItem(int orderItemId) {
-      OrderItemId = orderItemId;
-    }
+            OrderItemId = orderItemId;
+        }
 
-    public int OrderItemId { get; private set; }
-    public int ProductId { get; set; }
-    public decimal? PurchasePrice { get; set; }
-    public int Quantity { get; set; }
+        public int OrderItemId { get; private set; }
+        public int ProductId { get; set; }
+        public decimal? PurchasePrice { get; set; }
+        public int Quantity { get; set; }
 
-    /// <summary>
-    /// Retrieve one order item.
-    /// </summary>
+        /// <summary>
+        /// Retrieve one order item.
+        /// </summary>
         public OrderItem Retrieve(int orderItemId) {
-      // Code that retrieves the defined order item
+            // Code that retrieves the defined order item
 
-      return new OrderItem();
-    }
+            return new OrderItem();
+        }
 
-    /// <summary>
-    /// Saves the current order item.
-    /// </summary>
-    /// <returns></returns>
+        /// <summary>
+        /// Saves the current order item.
+        /// </summary>
+        /// <returns></returns>
         public bool Save() {
-      // Code that saves the defined order item
+            // Code that saves the defined order item
 
-      return true;
-    }
+            return true;
+        }
 
-    /// <summary>
-    /// Validates the order item data.
-    /// </summary>
-    /// <returns></returns>
+        /// <summary>
+        /// Validates the order item data.
+        /// </summary>
+        /// <returns></returns>
         public bool Validate() {
-      var isValid = true;
+            var isValid = true;
 
-      if (Quantity <= 0) isValid = false;
-      if (ProductId <= 0) isValid = false;
-      if (PurchasePrice == null) isValid = false;
+            if (Quantity <= 0) isValid = false;
+            if (ProductId <= 0) isValid = false;
+            if (PurchasePrice == null) isValid = false;
 
-      return isValid;
+            return isValid;
+        }
     }
-  }
 }
